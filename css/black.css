@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:100');
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.absolute {
+  position: absolute;
+  line-height: 100vh;
+}
+
+p {
+  color: white;
+  text-align: center;
+  font-family: 'Roboto Mono', monospace;
+  text-transform: uppercase;
+  font-size: 24px;
+  letter-spacing: 20px;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+}
+
+.title {
+  animation: text_in_out 30s ease-out;
+  -webkit-animation: text_in_out 30s ease-out;
+}
+
+.ciencien {
+
+  height: 100%;
+  width: 100%;
+}
+
+.third {
+  float: left;
+  width: 33.333333333%;
+  height: 33.333333333%;
+}
+
+.r {
+  /*background-color: #0A0000;*/
+  animation: cycle_r 30s infinite;
+  -webkit-animation: cycle_r 30s infinte;
+}
+
+.g {
+  /*background-color: #000A00;*/
+  animation: cycle_g 30s infinite;
+  -webkit-animation: cycle_g 30s infinte;
+}
+
+.b {
+  /*background-color: #00000A;*/
+  animation: cycle_b 30s infinite;
+  -webkit-animation: cycle_b 30s infinte;
+}
+
+@keyframes cycle_r {
+  0%    {background: #0A0000;}
+  33%   {background: #000A00;}
+  66%   {background: #00000A;}
+  100%  {background: #0A0000;}
+}
+
+@keyframes cycle_g {
+  0%    {background: #000A00;}
+  33%   {background: #00000A;}
+  66%   {background: #0A0000;}
+  100%  {background: #000A00;}
+}
+
+@keyframes cycle_b {
+  0%    {background: #00000A;}
+  33%   {background: #0A0000;}
+  66%   {background: #000A00;}
+  100%  {background: #00000A;}
+}
+
+@keyframes text_in_out {
+  0% {
+    transform: scale(1.02);
+    letter-spacing: 30px;
+    opacity: 0;
+  }
+  3% {
+    transform: scale(1);
+    /*letter-spacing: 29px;*/
+    opacity: 0.4;
+  }
+  70% {
+    transform: scale(1);
+    letter-spacing: 10px;
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(0.8);
+    letter-spacing: 10px;
+    opacity: 0;
+  }
+}
